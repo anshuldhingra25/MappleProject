@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.findpackers.android.aap.RechargeWalletActivity"
+    >
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/main_contain_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size_16"
+            android:padding="8dp"
+            android:text="@string/txt_recharge"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_all_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:padding="@dimen/margen_size_5"
+                android:text="   "
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/txt_points"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Amount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/txt_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Points"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:padding="@dimen/margen_size_5"
+                android:text="   Bonus"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swifeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.andexert.library.RippleView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                rv_centered="true">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_recharge"
+                android:layout_width="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </com.andexert.library.RippleView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/text_size_10"
+        android:layout_marginRight="@dimen/text_size_10"
+        android:layout_marginTop="@dimen/text_size_10"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.andexert.library.RippleView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            rv_centered="true">
+
+        <Button
+            android:id="@+id/btn_cradit_rechage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/text_size_20"
+            android:layout_marginRight="@dimen/text_size_20"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_button_appcolor"
+            android:fontFamily="sans-serif"
+            android:text="BUY NOW"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+        </com.andexert.library.RippleView>
+
+    </LinearLayout>
+
+</RelativeLayout>

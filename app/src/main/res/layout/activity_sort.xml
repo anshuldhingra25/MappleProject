@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_filter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/filtertollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            >
+
+
+            <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:id="@+id/mytypeRadioGroup"
+            android:checkedButton="@+id/sound" >
+
+                <RadioButton
+                    android:id="@+id/rd_latest"
+                    android:layout_marginTop="15dp"
+                    android:layoutDirection="rtl"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:layout_height="wrap_content" android:textColor="@color/black_tp"
+                    android:text="Latest" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <RadioButton
+                    android:id="@+id/rd_oldest"
+                    android:layout_marginTop="17dp"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:layoutDirection="rtl"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_tp"
+                    android:text="Oldest" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            <RadioButton
+                android:id="@+id/rd_low_high"
+                android:layout_marginTop="17dp"
+            android:layout_width="match_parent"
+                android:layout_margin="@dimen/dimen_5dp"
+                android:layoutDirection="rtl"
+                android:gravity="left|center_vertical"
+            android:layout_height="wrap_content" android:textColor="@color/black_tp"
+            android:text="Low To High Credit" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+            <RadioButton
+                android:id="@+id/rd_high_low"
+                android:layout_marginTop="17dp"
+                android:layout_margin="@dimen/dimen_5dp"
+                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/black_tp"
+            android:text="High To Low Credit" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <RadioButton
+                    android:id="@+id/rd_nearshiftingdate"
+                    android:layout_marginTop="17dp"
+                    android:layoutDirection="rtl"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:layout_width="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:layout_height="wrap_content" android:textColor="@color/black_tp"
+                    android:text="Nearing Shifting Date" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+        </RadioGroup>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+
+        <Button
+            android:id="@+id/btn_cancelfilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_size_5"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_delete"
+            android:fontFamily="sans-serif"
+            android:text="@string/txt_cancel"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_18" />
+
+        <Button
+            android:id="@+id/btn_applyfilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_size_5"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_appcolor"
+            android:fontFamily="sans-serif"
+            android:text="@string/txt_apply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

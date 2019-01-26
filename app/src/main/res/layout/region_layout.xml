@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/area_check_listRB"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_5dp"
+    tools:showIn="@layout/new_filter">
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbBangloreRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+
+        android:text="@string/txt_near_banglore"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbChandigarhRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+        android:text="@string/txt_near_chandigarh"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbChennaiRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+        android:text="@string/txt_near_chennai"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbDelhiRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+        android:text="@string/txt_delhi_ncr"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbHyderabadRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+        android:text="@string/txt_hyderabad"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbJaipurRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+        android:text="@string/txt_jaipur"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbKolkataRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+        android:text="@string/txt_kolkata"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbMumbaiRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+        android:text="@string/txt_mumbai"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbPuneRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+        android:text="@string/txt_pune"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbOtherRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layoutDirection="rtl"
+        android:text="Any other city"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+</RadioGroup>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+
+        <Button
+            android:id="@+id/btn_logOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_size_5"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/round_button_delete"
+            android:fontFamily="sans-serif"
+            android:text="@string/txt_cancel"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_20" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_size_5"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/round_button_appcolor"
+            android:fontFamily="sans-serif"
+            android:text="@string/txt_apply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,204 @@
+<resources>
+    <string name="app_name">Find Packers</string>
+    <string name="google_api">AIzaSyCcMMJ2NqHHQNg_5z3mu8sDVHQ9nJWc-X4</string>
+    <string name="txt_splesh1">Packers &amp; Movers</string>
+    <string name="txt_signin">Sign In"</string>
+    <string name="txt_signup">Sign Up</string>
+    <string name="txt_continue">Continue</string>
+    <string name="txt_copyright">Copyrights \u00a9 2018 Find Packers</string>
+    <string name="txt_copyright2">All rights reserved</string>
+
+    <string name="txt_password_hint">Password "</string>
+    <string name="txt_password_hint_length">Password(min 6 characters) "</string>
+    <string name="txt_current_password_hint">Current Password "</string>
+    <string name="txt_new_password_hint">New Password "</string>
+    <string name="txt_passwordconfirm_hint">Confirm Password "</string>
+    <string name="txt_account_hint">Don\'t have an account ? Sign Up </string>
+
+    <string name="txt_forgot_password">Forgot Password?</string>
+
+    <string name="txt_name_hint">First Name</string>
+    <string name="txt_lastname_hint">Last Name</string>
+    <string name="txt_email_hint">Email Id</string>
+    <string name="txt_email_address_hint">Email Address</string>
+    <string name="txt_phone_hint">Primary Phone No</string>
+    <string name="txt_phone_secondaryhint">Secondary Phone No</string>
+    <string name="txt_address_hint">Address</string>
+    <string name="txt_compny_hint">Company Name</string>
+
+    <string name="txt_pancard_hint">PAN No.</string>
+    <string name="txt_termsconditions_hint">I accept terms and conditions</string>
+
+
+    <string name="txt_submit_hint">Submit</string>
+    <string name="txt_resendotp_hint">Resend Otp</string>
+    <string name="txt_notreceive_otp_hint">Did\'t receive OTP ?</string>
+    <string name="txt_forgot_your_password">Forgot Your Password ?</string>
+    <string name="txt_dome">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip </string>
+    <string name="txt_dome_tow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </string>
+    <string name="txt_verify">Verify</string>
+    <string name="txt_update">Update</string>
+    <string name="txt_savechanges">Save Changes</string>
+    <string name="txt_all_leads">All Leads</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_setting">Setting</string>
+    <string name="txt_notification">Notifications</string>
+    <string name="txt_howit_work">How it Works ? </string>
+    <string name="txt_change_password">Change Password</string>
+
+    <string name="txt_terms_conditions">Terms &amp; conditions</string>
+
+    <string name="txt_create_your_password">Create Your Password !</string>
+
+
+    <string name="txt_recharge">Recharge Amount </string>
+    <string name="txt_thank_you">Thank You </string>
+
+    <string name="txt_cradit_recharge_succrssfully">You Have Successfully Recharged Your Credits</string>
+
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_apply">Apply</string>
+    <string name="txt_logout">Logout</string>
+    <string name="txt_delete">Delete</string>
+    <string name="txt_add_credit">Add Credit</string>
+    <string name="txt_contact_no">Primary contact No.</string>
+    <string name="txt_Sccontact_no">Secondary contact No.</string>
+
+
+    <!--Validation String-->
+    <string name="txt_passwordEnter">Please enter password</string>
+    <string name="txt_valid_password">Password must be at least 6 characters</string>
+    <string name="txt_phoneNoEnter">Please enter primary Phone No.</string>
+    <string name="txt_phoneNoEntersecondary">Please enter secondary Phone No.</string>
+    <string name="txt_validMobileEnter">Please enter valid phone No.</string>
+
+    <string name="txt_firstNameEnter">Please enter first name</string>
+    <string name="txt_lastNameEnter">Please enter last name</string>
+    <string name="txt_emailIdEnter">Please enter Email Id</string>
+    <string name="txt_emailIdvalidEnter">Please enter valid Email Id</string>
+    <string name="txt_confirmPasswordEnter">Please enter confirm password</string>
+    <string name="txt_notmatchPassword">Password Not Match</string>
+
+
+    <string name="txt_enteraddress">Please enter address</string>
+    <string name="txt_entercity">Please enter city</string>
+    <string name="txt_entercompnyname">Please enter company name</string>
+    <string name="txt_enterpanno">Please enter PAN No.</string>
+
+    <string name="txt_state">Please enter state</string>
+    <string name="txt_city">Please enter city</string>
+
+    <string name="txt_entervalidpanno">Please enter valid PAN No.</string>
+
+    <string name="txt_CurrentpasswordEnter">Please enter Current password</string>
+    <string name="txt_ConfirmpasswordEnter">Please enter Confirm password</string>
+
+
+    <string name="password_strength_weak">Weak</string>
+    <string name="password_strength_medium">Medium</string>
+    <string name="password_strength_strong">Strong</string>
+    <string name="password_strength_very_strong">Very Strong</string>
+
+
+    <string name="type_to_search">Type to Search</string>
+    <string name="txt_company_address_hint">Company Address</string>
+    <string name="company_name">Company Name</string>
+    <string name="select_area">Select Area</string>
+    <string name="txt_company_city_hint">Company City</string>
+
+    <string-array name="sports_array">
+        <item>Shuttle Badminton</item>
+        <item>Tennis</item>
+        <item>Table Tennis</item>
+        <item>Basket Ball</item>
+        <item>Foot Ball</item>
+        <item>Volley Ball</item>
+        <item>Hockey</item>
+        <item>Swimming</item>
+
+        <item>Shuttle Badminton 2</item>
+        <item>Tennis 2</item>
+        <item>Table Tennis 2</item>
+        <item>Basket Ball 2</item>
+        <item>Foot Ball 2</item>
+        <item>Volley Ball 2</item>
+        <item>Hockey 2</item>
+        <item>Swimming 2</item>
+
+        <item>Shuttle Badminton 3</item>
+        <item>Tennis 3</item>
+        <item>Table Tennis 3</item>
+        <item>Basket Ball 3</item>
+        <item>Foot Ball 3</item>
+        <item>Volley Ball 3</item>
+        <item>Hockey 3</item>
+        <item>Swimming 3</item>
+
+        <item>Shuttle Badminton 4</item>
+        <item>Tennis 4</item>
+        <item>Table Tennis 4</item>
+        <item>Basket Ball 4</item>
+        <item>Foot Ball 4</item>
+        <item>Volley Ball 4</item>
+        <item>Hockey 4</item>
+        <item>Swimming 4</item>
+
+        <item>Shuttle Badminton 5</item>
+        <item>Tennis 5</item>
+        <item>Table Tennis 5</item>
+        <item>Basket Ball 5</item>
+        <item>Foot Ball 5</item>
+        <item>Volley Ball 5</item>
+        <item>Hockey 5</item>
+        <item>Swimming 5</item>
+    </string-array>
+
+    <string-array name="nearMe_cities">
+        <item>Near Bangalore Region</item>
+        <item>Near Chennai Region</item>
+        <item>Near Delhi-NCR Region</item>
+        <item>Near Hyderabad Region</item>
+        <item>Near Kolkata Region</item>
+        <item>Near Mumbai Region</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string name="txt_near_banglore">Bangalore Region</string>
+    <string name="txt_near_chandigarh">Chandigarh Region</string>
+    <string name="txt_near_chennai">Chennai Region</string>
+    <string name="txt_delhi_ncr">Delhi-NCR Region</string>
+    <string name="txt_hyderabad">Hyderabad Region</string>
+    <string name="txt_jaipur">Jaipur Region</string>
+    <string name="txt_kolkata">Kolkata Region</string>
+    <string name="txt_mumbai">Mumbai Region</string>
+    <string name="txt_pune">Pune Region</string>
+    <string name="txt_other">Other</string>
+    <string name="txt_select_region">Select Region</string>
+
+    <string name="select_pickup_location">Select Pickup Location</string>
+    <string name="banglore_lat_lng">bangalore[12.972442][77.580643]</string>
+    <string name="chennai_lat_lng">chennai[13.067439][80.237617]</string>
+    <string name="delhi_lat_lng">delhi[28.644800][77.216721]</string>
+    <string name="hyderabad_lat_lng">hyderabad[17.387140][78.491684]</string>
+    <string name="kolkata_lat_lng">kolkata[22.572645][88.363892]</string>
+    <string name="mumbai_lat_lng">mumbai[19.228825][72.854118]</string>
+    <string name="pune_lat_lng">pune[18.516726][73.856255]</string>
+
+    <string name="chandigarh_lat_lng">chandigarh[30.741482][76.768066]</string>
+    <string name="jaipur_lat_lng">jaipur[26.922070][75.778885]</string>
+
+    <string name="txt_entercompanyaddress">Please enter company address</string>
+    <string name="select_lead_locations">Select atleast onelead location</string>
+
+    <string name="digits_number">1234567890+</string>
+    <string name="txt_phonemismatch">Primary and secondary phone number should not be same</string>
+    <string name="save_amp_upgrade"><![CDATA[Save & UpGrade]]></string>
+    <string name="upload_your_gst_certificate">Upload your GST certificate</string>
+    <string name="lead_pickup_city">Lead Pickup City</string>
+    <string name="select_one_at">Select one at this time, use filter to see other region leads after registeration.</string>
+    <string name="txt_company_city">Company City</string>
+    <string name="txt_invite">Invite</string>
+    <string name="refer_earn"><![CDATA[Refer & Earn]]></string>
+    <string name="default_notification_channel_id" translatable="false">com.findpackers.android.aap.ANDROID</string>
+</resources>

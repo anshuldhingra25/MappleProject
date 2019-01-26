@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+        android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="46dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+
+       <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SORT BY"
+            android:textColor="#444"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:id="@+id/mytypeRadioGroup"
+            android:checkedButton="@+id/sound" >
+
+            <RadioButton
+                android:id="@+id/rd_latest"
+                android:layoutDirection="rtl"
+                android:gravity="left|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_tp"
+                android:text="Latest" />
+
+            <RadioButton
+                android:id="@+id/rd_oldest"
+                android:layout_marginTop="5dp"
+                android:layoutDirection="rtl"
+                android:gravity="left|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_tp"
+                android:text="Oldest" />
+
+            <RadioButton
+                android:id="@+id/rd_low_high"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layoutDirection="rtl"
+                android:gravity="left|center_vertical"
+                android:layout_height="wrap_content" android:textColor="@color/black_tp"
+                android:text="Low To High Credit" />
+
+            <RadioButton
+                android:id="@+id/rd_high_low"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/black_tp"
+                android:text="High To Low Credit" />
+
+
+
+            <RadioButton
+                android:id="@+id/rd_nearshiftingdate"
+                android:layout_marginTop="5dp"
+                android:layoutDirection="rtl"
+                android:layout_width="match_parent"
+                android:gravity="left|center_vertical"
+                android:layout_height="wrap_content" android:textColor="@color/black_tp"
+                android:text="Nearing Shifting Date" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>

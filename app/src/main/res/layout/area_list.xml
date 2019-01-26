@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialoglayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin10"
+        android:paddingEnd="@dimen/margin10"
+        android:paddingTop="@dimen/margin10"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Select Lead Locations"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/filter_cancelIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cross_filter"
+            android:tint="@color/white" />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/viewTop"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layout_heading"
+        android:layout_height="0.5dp"
+        android:background="@color/white_hint" />
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_one_at"
+        android:paddingLeft="@dimen/margin10"
+        android:paddingEnd="@dimen/margin10"
+        android:textSize="@dimen/text_size_12"
+        android:paddingTop="@dimen/margin10"
+        android:layout_below="@+id/viewTop"
+        android:textColor="@color/white" />
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_area_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_heading"
+        android:layout_margin="5dp" />
+-->
+
+    <LinearLayout
+        android:id="@+id/area_check_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_heading"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_5dp"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cbBangloreRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_near_banglore"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cbChennaiRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_near_chennai"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cbDelhiRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_delhi_ncr"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cbHyderabadRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_hyderabad"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cbKolkataRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_kolkata"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cbMumbaiRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_mumbai"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cbPuneRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_pune"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cbOtherRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Any other city"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/area_check_listRB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_description"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_5dp"
+        android:visibility="visible">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbBangloreRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_near_banglore"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbChandigarhRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_near_chandigarh"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbChennaiRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_near_chennai"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbDelhiRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_delhi_ncr"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbHyderabadRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_hyderabad"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbJaipurRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_jaipur"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbKolkataRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_kolkata"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbMumbaiRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_mumbai"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbPuneRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/txt_pune"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbOtherRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Any other city"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white" />
+
+    </RadioGroup>
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/area_check_listRB">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white_hint" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/white_hint" />
+
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/view"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_apply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/view"
+            android:gravity="center"
+            android:text="Apply"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>

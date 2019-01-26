@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_icon_color"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradiant_toolbar"
+        android:elevation="4dp"
+        android:gravity="center"
+        app:contentInsetStart="4dp"
+        app:popupTheme="@style/Theme.AppCompat.NoActionBar">
+
+
+        <LinearLayout
+            android:id="@+id/ln_addcredidt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:gravity="center|start"
+                android:padding="2dp">
+
+
+                <ImageView
+                    android:id="@+id/back_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/margen_size_5"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_arrowtop" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:gravity="center"
+                android:text="@string/refer_earn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/contacts_list_refer_earn"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_height="wrap_content"
+        android:clickable="true" />
+
+
+</LinearLayout>
+

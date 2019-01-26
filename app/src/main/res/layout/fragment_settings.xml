@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_size_16"
+        android:fontFamily="sans-serif-smallcaps"
+        android:padding="8dp"
+        android:text="@string/txt_setting"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_margin="1dp"
+        android:background="@color/black_tp" />
+
+    <LinearLayout
+        android:id="@+id/layout_howit_works"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_size_5"
+        android:layout_marginTop="@dimen/margen_size_5"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:src="@mipmap/how_itwork" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:drawableRight="@mipmap/next_arrow_list"
+            android:padding="5dp"
+            android:text="@string/txt_howit_work"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_margin="1dp"
+        android:background="@color/black_tp" />
+
+    <LinearLayout
+        android:id="@+id/layout_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_size_5"
+        android:layout_marginTop="@dimen/margen_size_5"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:src="@mipmap/change_pass" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:drawableRight="@mipmap/next_arrow_list"
+            android:padding="5dp"
+            android:text="@string/txt_change_password"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_margin="1dp"
+        android:background="@color/black_tp" />
+
+    <LinearLayout
+        android:id="@+id/layout_terms_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_size_5"
+        android:layout_marginTop="@dimen/margen_size_5"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:src="@mipmap/terms" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:drawableRight="@mipmap/next_arrow_list"
+            android:padding="5dp"
+            android:text="@string/txt_terms_conditions"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_margin="1dp"
+        android:background="@color/black_tp" />
+
+    <LinearLayout
+        android:id="@+id/layout_privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_size_5"
+        android:layout_marginTop="@dimen/margen_size_5"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:src="@mipmap/policy" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:drawableRight="@mipmap/next_arrow_list"
+            android:padding="5dp"
+            android:text="Privacy Policy"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_margin="1dp"
+        android:background="@color/black_tp" />
+
+
+    <LinearLayout
+        android:id="@+id/layou_return_refund"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_size_5"
+        android:layout_marginTop="@dimen/margen_size_5"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:src="@mipmap/refund" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:drawableRight="@mipmap/next_arrow_list"
+            android:padding="5dp"
+            android:text="Refund and Cancellation policy"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_margin="1dp"
+        android:background="@color/black_tp" />
+
+    <LinearLayout
+        android:id="@+id/layou_diclamer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_size_5"
+        android:layout_marginTop="@dimen/margen_size_5"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:src="@mipmap/disclaimer" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:drawableRight="@mipmap/next_arrow_list"
+            android:padding="5dp"
+            android:text="Disclaimer"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_margin="1dp"
+        android:background="@color/black_tp" />
+    <LinearLayout
+        android:id="@+id/layou_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_size_5"
+        android:layout_marginTop="@dimen/margen_size_5"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:src="@mipmap/about" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:drawableRight="@mipmap/next_arrow_list"
+            android:padding="5dp"
+            android:text="About Us"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_margin="1dp"
+        android:background="@color/black_tp" />
+    <LinearLayout
+        android:id="@+id/layou_contactus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_size_5"
+        android:layout_marginTop="@dimen/margen_size_5"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:src="@mipmap/contact" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:drawableRight="@mipmap/next_arrow_list"
+            android:padding="5dp"
+            android:text="Contact Us"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_margin="1dp"
+        android:background="@color/black_tp" />
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

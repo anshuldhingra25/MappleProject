@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_profilecategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_below="@+id/scrollView"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/txt_categoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Please upload the reqired document for your premium account"
+                android:textColor="#454444"
+                android:textSize="14dp" />
+
+
+            <EditText
+                android:id="@+id/et_panno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your PAN"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_gstno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your GST No"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_pancard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_rectangleborderxmlcolored"
+                    android:padding="@dimen/dimen_10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_pancardimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/pan_card_attach"
+                        android:background="@android:color/transparent"
+                        android:gravity="center|start"
+                        android:hint="Upload your PAN card  " />
+
+                    <ImageView
+
+                        android:id="@+id/pan_card_attach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/attached" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_gstcerificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rectangleborderxmlcolored"
+                    android:padding="@dimen/dimen_10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/upload_gst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/upload_gst_attach"
+                        android:background="@android:color/transparent"
+                        android:gravity="center|start"
+                        android:hint="@string/upload_your_gst_certificate" />
+
+                    <ImageView
+
+                        android:id="@+id/upload_gst_attach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/attached" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_isocerficate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rectangleborderxmlcolored"
+                    android:padding="@dimen/dimen_10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/upload_iso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/upload_iso_attach"
+                        android:background="@android:color/transparent"
+                        android:gravity="center|start"
+                        android:hint="Upload your ISO certificate" />
+
+                    <ImageView
+
+                        android:id="@+id/upload_iso_attach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/attached" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_ibacertificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rectangleborderxmlcolored"
+                    android:padding="@dimen/dimen_10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/upload_iba"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/upload_iba_attach"
+                        android:background="@android:color/transparent"
+                        android:gravity="center|start"
+                        android:hint="Upload your IBA certificate" />
+
+                    <ImageView
+
+                        android:id="@+id/upload_iba_attach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/attached" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_pan_india_precence_compny"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rectangleborderxmlcolored"
+                    android:padding="@dimen/dimen_10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/check_india_pan"
+                        android:background="@android:color/transparent"
+                        android:gravity="center|start"
+                        android:hint="Are you PAN india Presence Company" />
+
+                    <CheckBox
+                        android:id="@+id/check_india_pan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_save_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_button_appcolor"
+            android:text="@string/save_amp_upgrade"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

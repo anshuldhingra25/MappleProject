@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4ab9cf</color>
+    <color name="colorPrimaryDark">#2394aa</color>
+    <color name="colorAccent">#4ab9cf</color>
+
+    <color name="app_color">#4ab9cf</color>
+    <color name="white">#ffffff</color>
+    <color name="white_hint">#baeae6e6</color>
+    <color name="whitetp">#00ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_tp">#f3484747</color>
+    <color name="gray">#edbab8b8</color>
+    <color name="app_icon_color">#2e5d97</color>
+
+    <color name="luxury_color">#8c713a</color>
+    <color name="standrad_color">#b27a59</color>
+    <color name="premium_color">#443f3b</color>
+
+    <color name="thankyou_color">#58e951</color>
+    <color name="transparent_color">#0058e951</color>
+    <color name="buynow_color">#E2E3E5</color>
+    <color name="nobuy_color">#dcf3e1</color>
+    <color name="souldout_color">#f0f3f8</color>
+
+    <color name="new_light_filter_color">#0bafcf</color>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_sign">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/logo" />
+
+            <TextView
+                android:visibility="gone"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/txt_splesh1"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20" />
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/text_size_22"
+            android:layout_marginRight="@dimen/text_size_22"
+            android:layout_weight=".8"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/btn_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_size_14"
+                android:background="@drawable/new_button_bg"
+                android:fontFamily="sans-serif"
+                android:text="@string/txt_signin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20" />
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_size_14"
+                android:background="@drawable/round_button_white"
+                android:fontFamily="sans-serif"
+                android:text="@string/txt_signup"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/text_size_20" />
+
+<LinearLayout
+    android:padding="8dp"
+    android:layout_marginTop="@dimen/text_size_24"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/txt_copyright"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/txt_copyright2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12" />
+
+</LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

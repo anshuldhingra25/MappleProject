@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/filtertollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/layout_leads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrollView"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:fontFamily="sans-serif"
+
+                    android:text="Lead Status"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/btn_todayhotlead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="Hot Leads"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_active"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="Active"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_sold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="Sold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_mylead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="My Leads"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <!-- <Button
+                         android:id="@+id/btn_mylead"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_margin="@dimen/dimen_5dp"
+                         android:layout_weight="1.1"
+                         android:background="@drawable/button_bg_rounded_corners_normal"
+                         android:fontFamily="sans-serif"
+                         android:gravity="center"
+                         android:text="My Leads"
+                         android:textAllCaps="false"
+                         android:textColor="@color/cb_textColor"
+                         android:textSize="12dp" />-->
+
+                    <Button
+                        android:id="@+id/btn_alllead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight=".95"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="All Leads"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_remaninglead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight=".95"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="Remaining Leads"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Pick up location:"
+
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1.3"
+                        android:visibility="visible">
+
+                        <include layout="@layout/region_layout" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <android.support.v4.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/lnspineer">
+
+
+                            <com.nex3z.flowlayout.FlowLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/add_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/dimen_5dp"
+                                android:layout_marginLeft="2dp"
+                                android:gravity="start|center"
+                                android:scrollbars="vertical"
+                                app:flChildSpacingForLastRow="align">
+
+                            </com.nex3z.flowlayout.FlowLayout>
+
+                        </android.support.v4.widget.NestedScrollView>
+
+                        <Button
+                            android:id="@+id/btn_nearby"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/button_bg_rounded_corners_normal"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Near Me"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cb_textColor"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/btn_nearby1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/btn_nearby"
+                            android:layout_margin="5dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="OR"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cb_textColor"
+                            android:textSize="12dp" />
+
+
+                        <LinearLayout
+                            android:id="@+id/lnspineer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/btn_nearby1"
+                            android:layout_margin="@dimen/dimen_5dp"
+                            android:background="@drawable/button_bg_rounded_corners_normal">
+
+
+                            <!-- <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                 android:id="@+id/spinner_search"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:fontFamily="sans-serif"
+                                 android:layout_weight="1"
+                                 android:textSize="16sp"
+
+                                 app:hintText="select city" />
+
+
+
+     -->
+
+                            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                                android:id="@+id/searchMultiSpinnerUnlimited"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".6"
+                                android:padding="4dp"
+                                app:hintText="Select city" />
+
+                            <Button
+                                android:id="@+id/btn_applycites"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".4"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="Apply"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+
+                        <!--
+                                                <Button
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_margin="@dimen/dimen_5dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@drawable/button_bg_rounded_corners_normal"
+                                                    android:gravity="center"
+                                                    android:text="Select City"
+                                                    android:textAllCaps="false"
+                                                    android:textColor="@color/cb_textColor"
+                                                    android:textSize="12dp" />-->
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_withincity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5dp"
+                            android:background="@drawable/button_bg_rounded_corners_normal"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Within City"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cb_textColor"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:id="@+id/btn_outsidecity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5dp"
+                            android:background="@drawable/button_bg_rounded_corners_normal"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Outside City"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cb_textColor"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:id="@+id/btn_international"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg_rounded_corners_normal"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="International"
+
+                            android:textAllCaps="false"
+                            android:textColor="@color/cb_textColor"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:id="@+id/btn_cgf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg_rounded_corners_normal"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="International"
+                            android:textAllCaps="false"
+
+                            android:textColor="@color/cb_textColor"
+                            android:textSize="12dp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrollView"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Property Size"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <Button
+                        android:id="@+id/btn_1bhk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="1 BHK"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_2bhk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="2 BHK"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_3bhk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="3 BHK"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <Button
+                        android:id="@+id/btn_lessthenibhk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="Less then 1 BHK"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_above3bhk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="Above 3 BHK"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="1 BHK"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp"
+
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Vehicle"
+                    android:textColor="@color/black" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <Button
+                        android:id="@+id/btn_car"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="Car"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_bike"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_rounded_corners_normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="Bike"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cb_textColor"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Lead Type "
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/ln_leadtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/margen_size_5"
+                    android:background="@drawable/button_bg_rounded_corners_normal"
+                    android:orientation="horizontal"
+
+                    android:weightSum="1">
+
+                    <Spinner
+                        android:id="@+id/spn_leadtype"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margen_size_5"
+                        android:fontFamily="sans-serif"
+                        android:padding="@dimen/margen_size_5"
+                        android:text="Lead Type"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_bg_rounded_corners_normal"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_delete"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/black_tp"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_appcolor"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Apply"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/main_contain_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_size_16"
+        android:fontFamily="sans-serif-smallcaps"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18" />
+    <WebView
+        android:id="@+id/webView"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margen_size_5"
+            android:layout_marginLeft="@dimen/text_size_10"
+            android:layout_marginRight="@dimen/text_size_10"
+            android:layout_marginTop="@dimen/margen_size_5"
+            android:fontFamily="sans-serif"
+            android:gravity="center|start"
+            android:text="@string/txt_dome_tow"
+            android:textAllCaps="false"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_12" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margen_size_5"
+            android:layout_marginLeft="@dimen/text_size_10"
+            android:layout_marginRight="@dimen/text_size_10"
+            android:layout_marginTop="@dimen/margen_size_5"
+            android:fontFamily="sans-serif"
+            android:gravity="center|start"
+            android:text="@string/txt_dome_two"
+            android:textAllCaps="false"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_12" /> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margen_size_5"
+            android:layout_marginLeft="@dimen/text_size_10"
+            android:layout_marginRight="@dimen/text_size_10"
+            android:layout_marginTop="@dimen/margen_size_5"
+            android:fontFamily="sans-serif"
+            android:gravity="center|start"
+            android:text="@string/txt_dome_two"
+            android:textAllCaps="false"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/point_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margen_size_5"
+            android:layout_marginLeft="@dimen/text_size_10"
+            android:layout_marginRight="@dimen/text_size_10"
+            android:layout_marginTop="@dimen/margen_size_5"
+            android:fontFamily="sans-serif"
+            android:gravity="center|start"
+            android:text="@string/txt_dome_1"
+            android:textAllCaps="false"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/point_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margen_size_5"
+            android:layout_marginLeft="@dimen/text_size_10"
+            android:layout_marginRight="@dimen/text_size_10"
+            android:layout_marginTop="@dimen/margen_size_5"
+            android:fontFamily="sans-serif"
+            android:gravity="center|start"
+            android:text="@string/txt_dome_2"
+            android:textAllCaps="false"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margen_size_5"
+            android:layout_marginLeft="@dimen/text_size_10"
+            android:layout_marginRight="@dimen/text_size_10"
+            android:layout_marginTop="@dimen/margen_size_5"
+            android:fontFamily="sans-serif"
+            android:gravity="center|start"
+            android:text="@string/txt_dome_tow"
+            android:textAllCaps="false"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_12" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margen_size_5"
+            android:layout_marginLeft="@dimen/text_size_10"
+            android:layout_marginRight="@dimen/text_size_10"
+            android:layout_marginTop="@dimen/margen_size_5"
+            android:drawableLeft="@drawable/point_bg"
+            android:drawablePadding="5dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center|start"
+            android:text="@string/txt_dome_3"
+            android:textAllCaps="false"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margen_size_5"
+            android:layout_marginLeft="@dimen/text_size_10"
+            android:layout_marginRight="@dimen/text_size_10"
+            android:layout_marginTop="@dimen/margen_size_5"
+            android:fontFamily="sans-serif"
+            android:gravity="center|start"
+            android:text="@string/txt_dome_tow"
+            android:textAllCaps="false"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_12" />-->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

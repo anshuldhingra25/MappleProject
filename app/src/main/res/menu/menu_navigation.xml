@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/group"
+        android:checkableBehavior="single">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@mipmap/lead_icon"
+        android:title="@string/txt_all_leads" />
+    <item
+        android:id="@+id/action_profile"
+        android:icon="@mipmap/profile_icon"
+        app:actionViewClass="android.widget.TextView"
+        android:title="@string/txt_profile" />
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@mipmap/setting_icon"
+        android:title="@string/txt_setting" />
+
+      <!--  <item
+        android:id="@+id/action_notification"
+        android:icon="@mipmap/notification"
+            app:actionViewClass="android.widget.TextView"
+        android:title="@string/txt_notification" />-->
+    </group>
+</menu>

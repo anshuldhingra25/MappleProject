@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    >
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:fontFamily="sans-serif"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:text="Select category"
+        android:textColor="@color/black"
+        />
+    <LinearLayout
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:id="@+id/layout_leads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+    <LinearLayout
+        android:id="@+id/ln_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    <TextView
+        android:layout_width="0dp"
+         android:layout_weight="1.7"
+        android:drawableLeft="@mipmap/iconstandard"
+        android:drawableTint="@color/app_color"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/dimen_14sp"
+        android:layout_height="wrap_content"
+        android:text="Upgrade to standard"
+        />
+    <CheckBox
+        android:id="@+id/check_standard"
+        android:layout_width="0dp"
+        android:layout_weight=".3"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_premium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:padding="@dimen/dimen_10dp"
+        android:weightSum="2">
+
+
+    <TextView
+        android:layout_width="0dp"
+         android:layout_weight="1.7"
+        android:drawableLeft="@mipmap/iconpremium"
+        android:drawableTint="@color/app_color"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/dimen_14sp"
+        android:layout_height="wrap_content"
+       android:text="Upgrade to Premium"
+        />
+    <CheckBox
+        android:id="@+id/check_premium"
+        android:layout_width="0dp"
+        android:layout_weight=".3"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_luxry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:padding="@dimen/dimen_10dp"
+        android:weightSum="2">
+
+    <TextView
+        android:layout_width="0dp"
+         android:layout_weight="1.7"
+        android:drawableLeft="@mipmap/iconluxury"
+        android:drawableTint="@color/app_color"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/dimen_14sp"
+        android:layout_height="wrap_content"
+        android:text="Upgrade to Luxury"
+        />
+    <CheckBox
+        android:id="@+id/check_luxry"
+        android:layout_width="0dp"
+        android:layout_weight=".3"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        />
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:padding="7dp"
+            android:layout_margin="@dimen/margen_size_5"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@drawable/round_button_delete"
+            android:fontFamily="sans-serif"
+            android:text="submit"
+            android:textAllCaps="false"
+            android:textColor="@color/app_icon_color"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+</RelativeLayout>

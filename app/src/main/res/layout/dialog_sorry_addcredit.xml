@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/sad" />
+
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:gravity="center"
+            android:padding="@dimen/text_size_10"
+            android:text="Sorry"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margen_size_5"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:background="@drawable/round_button_appcolor"
+                android:fontFamily="sans-serif"
+                android:text="Ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+
+            <Button
+                android:id="@+id/btn_addcredit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margen_size_5"
+                android:padding="@dimen/dimen_5dp"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:background="@drawable/round_button_appcolor"
+                android:fontFamily="sans-serif"
+                android:text="Add credit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+             />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

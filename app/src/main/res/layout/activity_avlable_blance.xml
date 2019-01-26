@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_avlable_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txt_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|start"
+            android:padding="5dp"
+            android:text="Available Credits"
+            android:textColor="@color/black_tp"
+            android:textSize="@dimen/text_size_16" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margen_size_5">
+
+            <TextView
+                android:id="@+id/txt_avlablebalence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:drawablePadding="@dimen/text_size_10"
+                android:drawableRight="@mipmap/sort"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="32dp" />
+
+
+
+            <TextView
+                android:id="@+id/txt_addcredits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:drawablePadding="@dimen/text_size_10"
+                android:drawableRight="@mipmap/add_creditbalance"
+                android:drawableTint="@color/app_color"
+                android:background="@drawable/round_button_delete"
+                android:layout_alignParentRight="true"
+                android:text="Add Credit"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5dp"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/white_hint" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center|start"
+        android:padding="8dp"
+        android:text="Recent credited and debited points "
+        android:textColor="@color/black_tp"
+        android:textSize="@dimen/text_size_16" />
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cb_grey"
+        app:tabTextColor="@color/gray"
+        app:tabSelectedTextColor="@color/app_color"
+        />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+   <!-- <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+-->
+
+</LinearLayout>
