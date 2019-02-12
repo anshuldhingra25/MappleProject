@@ -257,6 +257,7 @@ public class LeadsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
 
                 if (itemList.get(position).getBuyLead().equalsIgnoreCase("y")) {
                     ((TransactionHistoryViewHolder) holder).txtbuyNow.setText("My Lead  ");
+                    ((TransactionHistoryViewHolder) holder).txtmaxvendors.setVisibility(View.INVISIBLE);
                     ((TransactionHistoryViewHolder) holder).txtbuyNow.setBackground(ContextCompat.getDrawable(context, R.drawable.round_button_delete));
 
                     ((TransactionHistoryViewHolder) holder).txtbuyNow.setTextColor(Color.parseColor("#000000"));
@@ -276,7 +277,7 @@ public class LeadsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
                 ((TransactionHistoryViewHolder) holder).layoutAllDetais.setBackgroundColor(context.getResources().getColor(R.color.buynow_color));
                 ((TransactionHistoryViewHolder) holder).layoutShowDetails.setVisibility(View.VISIBLE);
                 ((TransactionHistoryViewHolder) holder).txtbuyNow.setText("My Lead  ");
-
+                ((TransactionHistoryViewHolder) holder).txtmaxvendors.setVisibility(View.INVISIBLE);
                 ((TransactionHistoryViewHolder) holder).txtbuyNow.setBackground(ContextCompat.getDrawable(context, R.drawable.round_button_delete));
                 ((TransactionHistoryViewHolder) holder).txtbuyNow.setTextColor(Color.parseColor("#000000"));
                 ((TransactionHistoryViewHolder) holder).txtbuyNow.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.bid_icon, 0, 0, 0);

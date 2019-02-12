@@ -26,11 +26,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -39,7 +37,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.findpackers.android.aap.commanUtill.ForceUpdate;
@@ -50,7 +50,8 @@ import com.findpackers.android.aap.fragment.AllLeadsFragment;
 import com.findpackers.android.aap.fragment.NotificationFragment;
 import com.findpackers.android.aap.fragment.ProfileFragment;
 import com.findpackers.android.aap.fragment.SettingFragment;
-import com.findpackers.android.aap.notification.BadgeUtils;
+import com.findpackers.android.aap.referandearn.ReferandEarn;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -61,11 +62,9 @@ import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
-import static android.support.v4.view.MenuItemCompat.getActionView;
-
 
 public class MainActivity extends AppCompatActivity {
-
+    ImageView ivReferEarn;
     TextView notificationsCount;
     Toolbar toolbar;
     TextView txtTitle;
@@ -89,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
         txtTitle = (TextView) findViewById(R.id.title);
         txt_notification = (TextView) findViewById(R.id.txt_notification);
         frmnotification = (FrameLayout) findViewById(R.id.frmnotification);
+        ivReferEarn = (ImageView) findViewById(R.id.ivReferEarn);
+        ivReferEarn.setVisibility(View.GONE);
         avlable_creditbalance = (TextView) findViewById(R.id.avlable_creditbalance);
         ln_creditbalance = (LinearLayout) findViewById(R.id.ln_creditbalance);
         ln_inercredit = (LinearLayout) findViewById(R.id.ln_inercredit);
@@ -97,18 +98,20 @@ public class MainActivity extends AppCompatActivity {
         Sessionout();
         AccountDeletBYadmin();
         welcometoPacker_mover();
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
         RequestParams params = new RequestParams();
-        fetchingCitiesWebservices(params);
+        params.put("userId", MyPreferences.getActiveInstance(MainActivity.this).getUserId());
+        params.put("fcmKey", refreshedToken);
+        params.put("version", BuildConfig.VERSION_NAME);
+        //fetchingCitiesWebservices(params);
+        updateTokenWebService(params);
         //  BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
-
+        // startService(new Intent(this, TokenUpdateService.class));
         setupBottomNavigation();
 
         menuNav = mBottomNavigationView.getMenu();
-
-
-        // mBottomNavigationView.setItemIconTintList(null);
-
-
+        String userId = MyPreferences.getActiveInstance(MainActivity.this).getUserId();
+        String fcmKey = FirebaseInstanceId.getInstance().getToken();
         frmnotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,7 +119,13 @@ public class MainActivity extends AppCompatActivity {
                 loadNotificationfregmentFragment();
             }
         });
-
+       /* ivReferEarn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ReferandEarn.class);
+                startActivity(intent);
+            }
+        });*/
         if (MyApplication.notificatonother) {
             MyApplication.notificatonother = false;
             if (savedInstanceState == null) {
@@ -156,17 +165,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-      /*  notificationsCount=(TextView) MenuItemCompat.getActionView(mBottomNavigationView.getMenu().
-                findItem(R.id.action_notification));*/
-
-
-        // MenuItem search = menuNav.findItem(R.id.action_notification);
-        //  notificationsCount = (TextView) search.getActionView();
-
-        // initializeCountDrawer();
-
-
     }
 
 
@@ -202,12 +200,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
-       /* if (this != null)
-            try {
-                this.registerReceiver(registerReceiver, intentFilter);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }*/
+
 
     }
 
@@ -273,12 +266,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
-       /* if (this != null)
-            try {
-                this.registerReceiver(registerReceiver, intentFilter);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }*/
+
 
     }
 
@@ -320,7 +308,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -359,9 +346,6 @@ public class MainActivity extends AppCompatActivity {
                         loadHomeFragment();
                         txtTitle.setText("All Leads");
                         MyApplication.activefregment = "home";
-                        //  toolbar.setVisibility(View.VISIBLE);
-
-                        // mBottomNavigationView.getMenu().getItem(R.id.action_home).setChecked(true);
 
                         return true;
                     case R.id.action_profile:
@@ -378,13 +362,7 @@ public class MainActivity extends AppCompatActivity {
                         MyApplication.activefregment = "setting";
                         // toolbar.setVisibility(View.VISIBLE);
                         return true;
-                  /*  case R.id.action_notification:
 
-                        loadNotificationfregmentFragment();
-                        txtTitle.setText("Notification");
-                        MyApplication.activefregment="setting";
-                        // toolbar.setVisibility(View.VISIBLE);
-                        return true;*/
                 }
                 return false;
             }
@@ -624,12 +602,56 @@ public class MainActivity extends AppCompatActivity {
         if (registerReceiver != null) {
             // unregisterReceiver(registerReceiver);
         }
+//        if (isMyServiceRunning(UpdateFcmTokenService.class)) {
+//            stopService(new Intent(this, UpdateFcmTokenService.class));
+//        }
 
 
     }
+
+
+    private void updateTokenWebService(RequestParams params) {
+
+        Log.e("nk", "Update Token params is>>>>" + params.toString());
+        String Url = WebserviceUrlClass.updateFcmToken;
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.setTimeout(10000);
+        client.post(Url, params, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                try {
+                    Log.e("nk", "FCM Response is>>>>" + response.toString());
+                    String respMessage = response.getString("responseMessage");
+                    String respcode = response.getString("responseCode");
+
+                    if (respcode.equals("200")) {
+                        System.out.println("UpdateServiceResponse=====" + "200");
+                        //  String userId = String.valueOf(response.getInt("userId"));//;
+
+
+                    } else {
+                        System.out.println("UpdateServiceResponse=====" + "Not 200");
+                    }
+                } catch (JSONException e) {
+                    System.out.println("UpdateServiceResponse=====" + "Exception");
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                //   Toast.makeText(getApplicationContext(), R.string.connection_error, Toast.LENGTH_LONG).show();
+                System.out.println("UpdateServiceResponse=====" + "failure");
+            }
+
+            @Override
+            public void onFinish() {
+                super.onFinish();
+            }
+
+        });
+
+    }
+
 }
-
-
-
-
-

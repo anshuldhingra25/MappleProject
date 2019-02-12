@@ -7,9 +7,9 @@ package com.findpackers.android.aap.commanUtill;
 public class WebserviceUrlClass {
 
 
-    //  public static final String BaseUrl = "http://www.findpackers.com/api/";
+      public static final String BaseUrl = "http://www.findpackers.com/api/";
     // public static final String BaseUrl = "http://www.alivenetsolution.co/findpackers/api/";
-    public static final String BaseUrl = "http://rambosoft.com/findpackers/api/";
+    //public static final String BaseUrl = "http://rambosoft.com/findpackers/api/";
 
     public static final String ImageUrl = "http://www.findpackers.com/public/admin/user/";
     public static final String Login = BaseUrl + "login";
@@ -41,5 +41,6 @@ public class WebserviceUrlClass {
     public static final String forgotPassword = BaseUrl + "forgotPassword";
     public static final String generateHashCode = BaseUrl + "getHash";
     public static final String generatechecksum = BaseUrl + "checksum";
+    public static final String updateFcmToken = BaseUrl + "update-fcm";
 
 }

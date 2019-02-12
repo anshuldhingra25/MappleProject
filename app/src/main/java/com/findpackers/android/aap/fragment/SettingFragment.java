@@ -2,7 +2,10 @@ package com.findpackers.android.aap.fragment;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -11,8 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.findpackers.android.aap.AboutUs;
+import com.findpackers.android.aap.BuildConfig;
 import com.findpackers.android.aap.ChangePasswordActivity;
 import com.findpackers.android.aap.ContactUs;
 import com.findpackers.android.aap.Disclamer;
@@ -36,15 +41,17 @@ public class SettingFragment extends Fragment {
     }
 
     Button layout_change_password;
-    LinearLayout btnChangePassword , btnHowItWork,btnTermsConditions,layout_privacy_policy;
-    LinearLayout layou_return_refund,layou_diclamer ,layou_about,layou_contactus;
+    LinearLayout btnChangePassword, btnHowItWork, btnTermsConditions, layout_privacy_policy;
+    LinearLayout layou_return_refund, layou_diclamer, layou_about, layou_contactus, layout_notification;
+    TextView tvVersionInfo;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
-
+        tvVersionInfo = view.findViewById(R.id.tvVersionInfo);
+        tvVersionInfo.setText("Version : " + BuildConfig.VERSION_NAME);
         btnChangePassword = (LinearLayout) view.findViewById(R.id.layout_change_password);
         btnHowItWork = (LinearLayout) view.findViewById(R.id.layout_howit_works);
         btnTermsConditions = (LinearLayout) view.findViewById(R.id.layout_terms_conditions);
@@ -53,6 +60,8 @@ public class SettingFragment extends Fragment {
         layou_diclamer = (LinearLayout) view.findViewById(R.id.layou_diclamer);
         layou_about = (LinearLayout) view.findViewById(R.id.layou_about);
         layou_contactus = (LinearLayout) view.findViewById(R.id.layou_contactus);
+
+        layout_notification = (LinearLayout) view.findViewById(R.id.layout_notification);
 
         btnChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,13 +121,32 @@ public class SettingFragment extends Fragment {
             }
         });
 
+        layout_notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.N_MR1) {
+                    intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
+                    intent.putExtra("android.provider.extra.APP_PACKAGE", getActivity().getPackageName());
+                } else if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
+                    intent.putExtra("app_package", getActivity().getPackageName());
+                    intent.putExtra("app_uid", getActivity().getApplicationInfo().uid);
+                } else {
+                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    intent.addCategory(Intent.CATEGORY_DEFAULT);
+                    intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
+                }
 
+                getActivity().startActivity(intent);
+            }
+        });
         view.setFocusableInTouchMode(true);
         view.requestFocus();
         view.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if( keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
+                if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
                     Log.i("navin", "onKey Back listener is working!!!");
                     Intent in = new Intent(getActivity(), MainActivity.class);
                     startActivity(in);

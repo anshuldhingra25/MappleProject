@@ -201,4 +201,7 @@
     <string name="txt_invite">Invite</string>
     <string name="refer_earn"><![CDATA[Refer & Earn]]></string>
     <string name="default_notification_channel_id" translatable="false">com.findpackers.android.aap.ANDROID</string>
+    <string name="share_message">I am using this application to get 100% genuine packers &amp; movers lead for all major cities of india, you should also download FindPackers app.</string>
+    <string name="notification_setting">Notification Setting</string>
 </resources>
+<!--4677b9f7-fa90-4884-89e1-1ddfc1ac5ae2-->

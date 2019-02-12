@@ -57,6 +57,15 @@ import cz.msebera.android.httpclient.Header;
 public class NotificationFragment extends Fragment implements Adapter_notifications.Readnotifications {
 
     LinearLayoutManager llm;
+    RecyclerView recycler_view;
+    ProgressDialog prgDialog;
+    private Adapter_notifications mAdapter;
+    private ArrayList<NotificationResource> myRechargeList = new ArrayList<NotificationResource>();
+
+    public static NotificationFragment newInstance() {
+
+        return new NotificationFragment();
+    }
 
     @Override
     public void readnotifications(String notificationId) {
@@ -74,15 +83,6 @@ public class NotificationFragment extends Fragment implements Adapter_notificati
 
     }
 
-    RecyclerView recycler_view;
-    ProgressDialog prgDialog;
-    private Adapter_notifications mAdapter;
-    private ArrayList<NotificationResource> myRechargeList = new ArrayList<NotificationResource>();
-
-    public static NotificationFragment newInstance() {
-
-        return new NotificationFragment();
-    }
 
 
     @Nullable
@@ -146,8 +146,8 @@ public class NotificationFragment extends Fragment implements Adapter_notificati
 
 
                             mrecharge.setId(obj.getString("id"));
-                            mrecharge.setNotificationText(obj.getString("notificationText"));
-                            mrecharge.setNotificationTitle(obj.getString("notificationTitle"));
+                            mrecharge.setNotificationText(obj.getString("notificationText").replace("\u00a0",""));
+                            mrecharge.setNotificationTitle(obj.getString("notificationTitle").replace("\u00a0",""));
                             // mrecharge.setCreated_at(obj.getString("created_at"));
                             mrecharge.setCreated_at(Utility.Timeformateanother(obj.getString("created_at").toString().trim()));
 

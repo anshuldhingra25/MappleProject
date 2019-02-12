@@ -10,7 +10,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,8 +18,6 @@ import android.widget.Toast;
 
 import com.findpackers.android.aap.commanUtill.CommanMethod;
 import com.findpackers.android.aap.commanUtill.MyPreferences;
-import com.findpackers.android.aap.commanUtill.SmsListener;
-import com.findpackers.android.aap.commanUtill.SmsReceiver;
 import com.findpackers.android.aap.commanUtill.WebserviceUrlClass;
 import com.findpackers.android.aap.notification.Config;
 import com.loopj.android.http.AsyncHttpClient;
@@ -155,17 +152,13 @@ public class OtpVerificationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               /* Intent newIntent = new Intent(OtpVerificationActivity.this,WelComeActivity.class);
-                newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                newIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(newIntent);
-*/
+
                 onBackPressed();
 
             }
         });
 
-
+/*
         SmsReceiver.bindListener(new SmsListener() {
             @Override
             public void messageReceived(String messageText) {
@@ -185,7 +178,7 @@ public class OtpVerificationActivity extends AppCompatActivity {
 
                 }
             }
-        });
+        });*/
 
         final StringBuilder sb = new StringBuilder();
         etOne.addTextChangedListener(new TextWatcher() {

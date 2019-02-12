@@ -343,6 +343,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 mChannel.enableLights(true);
                 mChannel.setLightColor(Color.RED);
                 mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+                assert mNotificationManager != null;
                 mNotificationManager.createNotificationChannel(mChannel);
             } else {
                 mNotificationBuilder.setContentTitle(getString(R.string.app_name))

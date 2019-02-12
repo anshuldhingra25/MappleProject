@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -21,13 +20,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private ArrayList<Contacts> arraylist;
     boolean checked = false;
     View vv;
+    private onItemClick onItemClick;
 
-
-    public RecyclerAdapter(LayoutInflater inflater, List<Contacts> items) {
+    public RecyclerAdapter(LayoutInflater inflater, List<Contacts> items, onItemClick onItemClickt) {
         this.layoutInflater = inflater;
         this.cont = items;
         this.arraylist = new ArrayList<Contacts>();
         this.arraylist.addAll(cont);
+        this.onItemClick = onItemClickt;
     }
 
     @Override
@@ -44,7 +44,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         holder.title.setText(name);
         holder.phone.setText(list.getPhone());
-
+        holder.txt_invite_contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onItemClick.onInviteClick(list.getName(), holder.phone.getText().toString());
+            }
+        });
     }
 
     @Override
@@ -52,9 +57,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return cont.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView title;
         public TextView phone;
+        TextView txt_invite_contact;
         public RelativeLayout contact_select_layout;
 
         public ViewHolder(View itemView) {
@@ -63,6 +69,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             title = (TextView) itemView.findViewById(R.id.tv_contact_name);
             phone = (TextView) itemView.findViewById(R.id.tv_contact_number);
             contact_select_layout = (RelativeLayout) itemView.findViewById(R.id.contact_select_layout);
+            txt_invite_contact = (TextView) itemView.findViewById(R.id.txt_invite_contact);
+
+        }
+
+        @Override
+        public void onClick(View view) {
 
         }
     }
@@ -77,6 +89,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return position;
     }
 
+    public interface onItemClick {
+        void onInviteClick(String name, String phone);
+
+    }
+
+    public void updateList(ArrayList<Contacts> list) {
+        cont = list;
+        notifyDataSetChanged();
+    }
 
 }
  

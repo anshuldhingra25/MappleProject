@@ -15,8 +15,8 @@ android {
         applicationId "com.findpackers.android.aap"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 22
-        versionName "2.95"
+        versionCode 23
+        versionName "2.96"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 

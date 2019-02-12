@@ -4,134 +4,135 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="4dp"
     android:background="@color/white"
     card_view:cardCornerRadius="2dp"
-    android:layout_margin="4dp"
     card_view:cardElevation="5dp">
 
 
-<LinearLayout
-    android:id="@+id/ln_row"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/box_bg"
-    android:orientation="vertical">
-
-    <RelativeLayout
-
+    <LinearLayout
+        android:id="@+id/ln_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingBottom="10dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:weightSum="2">
+        android:background="@drawable/box_bg"
+        android:orientation="vertical">
 
+        <RelativeLayout
 
-        <ImageView
-            android:visibility="gone"
-            android:id="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:scaleType="center"
-            android:src="@mipmap/add_credit" />
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_toLeftOf="@+id/layout_price"
-            android:layout_toRightOf="@+id/image"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="10dp"
+            android:weightSum="2">
 
 
-            <TextView
-                android:id="@+id/txt_notificationtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center|start"
-                android:padding="5dp"
-                android:text="Title"
-                android:textColor="@color/black_tp"
-                android:textSize="@dimen/text_size_16" />
-
-            <TextView
-                android:id="@+id/txt_msg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center|start"
-                android:paddingBottom="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="hellnojncknedcneocoeer"
-                android:textColor="@color/black_tp"
-                android:textSize="@dimen/text_size_12" />
-            <TextView
-                android:id="@+id/txt_txndate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center|start"
-                android:paddingBottom="5dp"
-                android:drawableLeft="@mipmap/shift_date"
-                android:drawablePadding="@dimen/dimen_7dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="March 16,2018"
-                android:textColor="@color/black_tp"
-                android:textSize="@dimen/text_size_12" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/layout_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:orientation="vertical"
-            android:padding="@dimen/margen_size_5">
-
-            <TextView
-
-                android:visibility="gone"
-                android:id="@+id/txt_readstatus"
+            <ImageView
+                android:id="@+id/image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:drawablePadding="@dimen/text_size_10"
-                android:text="read"
-                android:textColor="@color/black"
-                android:textSize="18dp" />
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:scaleType="center"
+                android:src="@mipmap/add_credit"
+                android:visibility="gone" />
 
-            <TextView
-                android:visibility="gone"
-                android:id="@+id/txt_rchrgamount"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/layout_price"
+                android:layout_toRightOf="@+id/image"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txt_notificationtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:padding="5dp"
+                    android:text="Title"
+                    android:textColor="@color/black_tp"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/txt_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="hellnojncknedcneocoeer"
+                    android:textColor="@color/black_tp"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/txt_txndate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@mipmap/shift_date"
+                    android:drawablePadding="@dimen/dimen_7dp"
+                    android:gravity="center|start"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="March 16,2018"
+                    android:textColor="@color/black_tp"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/dimen_2dp"
-                android:text="free credit"
-                android:textColor="@color/button_green"
-                android:textSize="10sp" />
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="@dimen/margen_size_5">
 
-        </LinearLayout>
+                <TextView
+
+                    android:id="@+id/txt_readstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:drawablePadding="@dimen/text_size_10"
+                    android:text="read"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_rchrgamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dimen_2dp"
+                    android:text="free credit"
+                    android:textColor="@color/button_green"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/white" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
 
-</LinearLayout>
+    </LinearLayout>
 </android.support.v7.widget.CardView>

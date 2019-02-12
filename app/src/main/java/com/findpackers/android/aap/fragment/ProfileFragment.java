@@ -477,7 +477,7 @@ public class ProfileFragment extends Fragment {
 
                 }
 
-                if (etFirstName.isEnabled()) {
+                if (etAddress.isEnabled()) {
                     DrawableCompat.setTint(ivEditableBtn.getDrawable(), ContextCompat.getColor(getActivity(), R.color.gray));
 
                     iv_updateProfile.setVisibility(view.VISIBLE);
@@ -859,7 +859,7 @@ public class ProfileFragment extends Fragment {
     }
 
     private void selectImage() {
-        final CharSequence[] items = {"Take Photo", "Choose from Library",
+        final CharSequence[] items = {"Choose from Library",
                 "Cancel"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

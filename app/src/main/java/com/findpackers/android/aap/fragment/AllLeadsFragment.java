@@ -188,7 +188,6 @@ public class AllLeadsFragment extends Fragment implements LeadsRecyclerAdapter.S
 
                     }
                     params.put("allLead", MyApplication.strcheck_allleads);
-
                     params.put("myLead", MyApplication.strcheck_myleads);
                     params.put("remainingLead", MyApplication.strcheck_remainlead);
                     params.put("hot", MyApplication.strcheck_hot);

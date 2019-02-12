@@ -90,7 +90,7 @@ public class Adapter_notifications extends RecyclerView.Adapter<RecyclerView.Vie
                 public void onClick(View view) {
 
                     oldposition = getAdapterPosition();
-                    readnotifications.readnotifications(itemList.get(oldposition).getId());
+                  //  readnotifications.readnotifications(itemList.get(oldposition).getId());
                 }
             });
 

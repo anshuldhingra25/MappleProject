@@ -39,6 +39,7 @@ import cz.msebera.android.httpclient.Header;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.READ_CONTACTS;
 import static android.Manifest.permission.READ_SMS;
 
 /**
@@ -168,7 +169,7 @@ public class WelComeActivity extends AppCompatActivity {
 
     private void requestPermission() {
 
-        ActivityCompat.requestPermissions(this, new String[]{READ_SMS, CAMERA,ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
 
     }
 
@@ -180,9 +181,9 @@ public class WelComeActivity extends AppCompatActivity {
                 if (grantResults.length > 0) {
 
                     boolean locationAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-                    boolean cameraAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
+                //    boolean cameraAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
 
-                    if (locationAccepted && cameraAccepted){
+                    if (locationAccepted ){
                         // Snackbar.make(view, "Permission Granted, Now you can access location data and camera.", Snackbar.LENGTH_LONG).show();
                     }
 
@@ -197,7 +198,7 @@ public class WelComeActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                                                    requestPermissions(new String[]{ACCESS_FINE_LOCATION, CAMERA},
+                                                    requestPermissions(new String[]{ACCESS_FINE_LOCATION},
                                                             PERMISSION_REQUEST_CODE);
                                                 }
                                             }

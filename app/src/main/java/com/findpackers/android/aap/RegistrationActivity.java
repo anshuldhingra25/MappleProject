@@ -3,7 +3,6 @@ package com.findpackers.android.aap;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,7 +24,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -35,7 +33,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -51,7 +48,6 @@ import com.findpackers.android.aap.commanUtill.MyPreferences;
 import com.findpackers.android.aap.commanUtill.PasswordStrength;
 import com.findpackers.android.aap.commanUtill.WebserviceUrlClass;
 import com.findpackers.android.aap.notification.Config;
-import com.findpackers.android.aap.popupwindow.AdvancePopupWindow;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -242,56 +238,7 @@ public class RegistrationActivity extends AppCompatActivity implements TextWatch
                 }
             }
         });
-       /* etPhoneNo.addTextChangedListener(new TextWatcher() {
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (!s.toString().startsWith("+91")) {
-                    etPhoneNo.setText("+91");
-                    Selection.setSelection(etPhoneNo.getText(), etPhoneNo.getText().length());
-
-                }
-
-            }
-        });*/
-     /*   et_phone_noOptional.addTextChangedListener(new TextWatcher() {
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (!s.toString().startsWith("+91")) {
-                    et_phone_noOptional.setText("+91");
-                    Selection.setSelection(et_phone_noOptional.getText(), et_phone_noOptional.getText().length());
-
-                }
-
-            }
-        });*/
         state_spinner.setOnItemSelectedListener(this);
         //Creating the ArrayAdapter instance having the country list
         ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, state);
