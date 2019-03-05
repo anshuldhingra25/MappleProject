@@ -38,9 +38,6 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
-import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.READ_CONTACTS;
-import static android.Manifest.permission.READ_SMS;
 
 /**
  * Created by narendra on 2/9/2018.

@@ -1,22 +1,4 @@
-/*
- * Copyright (c) 2016. Truiton (http://www.truiton.com/).
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * Contributors:
- * Mohit Gupt (https://github.com/mohitgupt)
- *
- */
+
 
 package com.findpackers.android.aap;
 
@@ -42,6 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.crashlytics.android.Crashlytics;
 import com.findpackers.android.aap.commanUtill.ForceUpdate;
 import com.findpackers.android.aap.commanUtill.MyApplication;
 import com.findpackers.android.aap.commanUtill.MyPreferences;
@@ -51,6 +34,7 @@ import com.findpackers.android.aap.fragment.NotificationFragment;
 import com.findpackers.android.aap.fragment.ProfileFragment;
 import com.findpackers.android.aap.fragment.SettingFragment;
 import com.findpackers.android.aap.referandearn.ReferandEarn;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -75,14 +59,15 @@ public class MainActivity extends AppCompatActivity {
     private BroadcastReceiver registerReceiver;
     private BottomNavigationView mBottomNavigationView;
     private Menu menuNav;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        Crashlytics.getInstance().crash(); // Force a crash
 
-        // ShortcutBadger.removeCount(this);
-        // BadgeUtils.clearBadge(this);
 
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         txtTitle = (TextView) findViewById(R.id.title);

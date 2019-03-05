@@ -124,21 +124,43 @@ public class SettingFragment extends Fragment {
         layout_notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.N_MR1) {
-                    intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
-                    intent.putExtra("android.provider.extra.APP_PACKAGE", getActivity().getPackageName());
-                } else if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
-                    intent.putExtra("app_package", getActivity().getPackageName());
-                    intent.putExtra("app_uid", getActivity().getApplicationInfo().uid);
-                } else {
+                try {
+                    Intent intent = new Intent();
                     intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    intent.addCategory(Intent.CATEGORY_DEFAULT);
-                    intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
+                    Uri uri = Uri.fromParts("package", getActivity().getPackageName(), null);
+                    intent.setData(uri);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
+//                Intent intent = new Intent();
+//                intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
+//
+////for Android 5-7
+//                intent.putExtra("app_package", getActivity().getPackageName());
+//                intent.putExtra("app_uid", getActivity().getApplicationInfo().uid);
+//
+//// for Android 8 and above
+//                intent.putExtra("android.provider.extra.APP_PACKAGE", getActivity().getPackageName());
+//
+//                startActivity(intent);
 
-                getActivity().startActivity(intent);
+//                Intent intent = new Intent();
+//                if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.N_MR1) {
+//                    intent.setAction("android.settings.ACTION_APPLICATION_DETAILS_SETTINGS");
+//                    intent.putExtra("android.provider.extra.APP_PACKAGE", getActivity().getPackageName());
+//                    intent.putExtra(Settings.EXTRA_CHANNEL_ID, "com.findpackers.android.aap.ANDROID");
+//                } else if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                    intent.setAction("android.settings.ACTION_APPLICATION_DETAILS_SETTINGS");
+//                    intent.putExtra("app_package", getActivity().getPackageName());
+//                    intent.putExtra("app_uid", getActivity().getApplicationInfo().uid);
+//                } else {
+//                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+//                    intent.addCategory(Intent.CATEGORY_DEFAULT);
+//                    intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
+//                }
+//
+//                getActivity().startActivity(intent);
             }
         });
         view.setFocusableInTouchMode(true);

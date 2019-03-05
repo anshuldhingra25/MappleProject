@@ -83,8 +83,8 @@ public class LeadsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
                     totalItemCount = linearLayoutManager.getItemCount();
                     lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
                     onLoadMoreListener.onLoadMore(lastVisibleItem, totalItemCount);
-                    Log.e("Load more : " ,"totalItemCount=="+totalItemCount);
-                    Log.e("Load more : " ,"lastVisibleItem=="+lastVisibleItem);
+                    Log.e("Load more : ", "totalItemCount==" + totalItemCount);
+                    Log.e("Load more : ", "lastVisibleItem==" + lastVisibleItem);
 
                 }
 
@@ -104,50 +104,6 @@ public class LeadsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
         }
         throw new RuntimeException("No match for " + viewType + ".");
     }
-
-
-   /* @Override
-    public TransactionHistoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-      *//*  View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_leads, parent, false);
-        TransactionHistoryViewHolder rcv = new TransactionHistoryViewHolder(view);
-        return rcv;*//*
-
-        if (viewType == TYPE_HEADER) {
-           *//* View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_leads, parent, false);
-            TransactionHistoryViewHolder rcv = new TransactionHistoryViewHolder(view);
-            return rcv;*//*
-            View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.header_layout, parent, false);
-            return new com.alivenet.solution.findpackers.adapter.HeaderViewHolder(layoutView);
-        } else if (viewType == TYPE_ITEM) {
-            //View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_leads, parent, false);
-            TransactionHistoryViewHolder rcv = new TransactionHistoryViewHolder(view);
-            return rcv;
-        }
-        throw new RuntimeException("No match for " + viewType + ".");
-
-
-
-    }
-*/
-    /*@Override
-    public void onBindViewHolder(TransactionHistoryViewHolder holder, int position) {
-        //  "Buy Now", "Bought", "Sold Out"
-
-        String staust = itemList.get(position).getStatus();
-        if (staust.equalsIgnoreCase("Buy Now")) {
-            holder.layoutAllDetais.setBackgroundColor(context.getResources().getColor(R.color.buynow_color));
-            holder.layoutShowDetails.setVisibility(View.GONE);
-        } else if (staust.equalsIgnoreCase("Bought")) {
-            holder.layoutAllDetais.setBackgroundColor(context.getResources().getColor(R.color.buynow_color));
-            holder.layoutShowDetails.setVisibility(View.VISIBLE);
-        } else if (staust.equalsIgnoreCase("Sold Out")) {
-            holder.layoutAllDetais.setBackgroundColor(context.getResources().getColor(R.color.souldout_color));
-            holder.layoutShowDetails.setVisibility(View.GONE);
-        }
-
-    }*/
 
 
     @Override
@@ -182,22 +138,15 @@ public class LeadsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
 
                 if (itemList.get(position).getCategory_status().equalsIgnoreCase("1")) {
 
-
                     ((TransactionHistoryViewHolder) holder).leadcategory.setVisibility(View.VISIBLE);
                     ((TransactionHistoryViewHolder) holder).leadcategory2.setVisibility(View.INVISIBLE);
                     ((TransactionHistoryViewHolder) holder).leadcategory3.setVisibility(View.INVISIBLE);
 
-
-                }
-                if (itemList.get(position).getCategory_status().equalsIgnoreCase("2")) {
-
+                } else if (itemList.get(position).getCategory_status().equalsIgnoreCase("2")) {
                     ((TransactionHistoryViewHolder) holder).leadcategory.setVisibility(View.VISIBLE);
                     ((TransactionHistoryViewHolder) holder).leadcategory2.setVisibility(View.VISIBLE);
                     ((TransactionHistoryViewHolder) holder).leadcategory3.setVisibility(View.INVISIBLE);
-
-                }
-                if (itemList.get(position).getCategory_status().equalsIgnoreCase("3")) {
-
+                } else if (itemList.get(position).getCategory_status().equalsIgnoreCase("3")) {
                     ((TransactionHistoryViewHolder) holder).leadcategory.setVisibility(View.VISIBLE);
                     ((TransactionHistoryViewHolder) holder).leadcategory2.setVisibility(View.VISIBLE);
                     ((TransactionHistoryViewHolder) holder).leadcategory3.setVisibility(View.VISIBLE);
@@ -206,11 +155,16 @@ public class LeadsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
 
             }
 
-            if (itemList.get(position).getCar().equalsIgnoreCase("1"))
+            if (itemList.get(position).getCar().equalsIgnoreCase("1")) {
                 ((TransactionHistoryViewHolder) holder).txt_car.setVisibility(View.VISIBLE);
-            if (itemList.get(position).getBike().equalsIgnoreCase("1"))
+            } else {
+                ((TransactionHistoryViewHolder) holder).txt_car.setVisibility(View.GONE);
+            }
+            if (itemList.get(position).getBike().equalsIgnoreCase("1")) {
                 ((TransactionHistoryViewHolder) holder).txt_bike.setVisibility(View.VISIBLE);
-
+            } else {
+                ((TransactionHistoryViewHolder) holder).txt_bike.setVisibility(View.GONE);
+            }
 
             if (itemList.get(position).getLevel().equalsIgnoreCase("1")) {
 
@@ -221,10 +175,7 @@ public class LeadsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
                 ((TransactionHistoryViewHolder) holder).leadcategory2.setBackground(ContextCompat.getDrawable(context, R.drawable.premium));
                 ((TransactionHistoryViewHolder) holder).leadcategory3.setBackground(ContextCompat.getDrawable(context, R.drawable.premium));
 
-
-            }
-
-            if (itemList.get(position).getLevel().equalsIgnoreCase("2")) {
+            } else if (itemList.get(position).getLevel().equalsIgnoreCase("2")) {
 
                 ((TransactionHistoryViewHolder) holder).leadcategory2.setTextColor(Color.parseColor("#ffffff"));
                 ((TransactionHistoryViewHolder) holder).leadcategory.setTextColor(Color.parseColor("#f3484747"));
@@ -233,9 +184,7 @@ public class LeadsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
                 ((TransactionHistoryViewHolder) holder).leadcategory.setBackground(ContextCompat.getDrawable(context, R.drawable.premium));
                 ((TransactionHistoryViewHolder) holder).leadcategory3.setBackground(ContextCompat.getDrawable(context, R.drawable.premium));
 
-
-            }
-            if (itemList.get(position).getLevel().equalsIgnoreCase("3")) {
+            } else if (itemList.get(position).getLevel().equalsIgnoreCase("3")) {
 
                 ((TransactionHistoryViewHolder) holder).leadcategory3.setTextColor(Color.parseColor("#ffffff"));
                 ((TransactionHistoryViewHolder) holder).leadcategory.setTextColor(Color.parseColor("#f3484747"));
@@ -286,16 +235,13 @@ public class LeadsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
 
             } else {
 
-
                 ((TransactionHistoryViewHolder) holder).layoutAllDetais.setBackgroundColor(context.getResources().getColor(R.color.nobuy_color));
                 ((TransactionHistoryViewHolder) holder).layoutShowDetails.setVisibility(View.GONE);
                 ((TransactionHistoryViewHolder) holder).txtbuyNow.setText("BUY      ");
-
                 ((TransactionHistoryViewHolder) holder).txtbuyNow.setBackground(ContextCompat.getDrawable(context, R.drawable.selectbackgroundappcolor));
                 ((TransactionHistoryViewHolder) holder).txtbuyNow.setTextColor(Color.parseColor("#ffffff"));
                 ((TransactionHistoryViewHolder) holder).txtbuyNow.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.bid_iconwhite, 0, 0, 0);
                 ((TransactionHistoryViewHolder) holder).txtbuyNow.setCompoundDrawablePadding(3);
-
 
             }
             ((TransactionHistoryViewHolder) holder).txtbuyNow.setOnClickListener(new View.OnClickListener() {
