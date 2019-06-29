@@ -1,3 +1,0 @@
-jks alias key1
-password findpackers@123456
-google account support@findpackers.in

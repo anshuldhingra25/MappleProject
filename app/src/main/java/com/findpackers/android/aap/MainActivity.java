@@ -133,14 +133,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       /* ln_creditbalance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent in = new Intent(MainActivity.this, AvlableBlance.class);
-                startActivity(in);
-            }
-        });*/
         ln_inercredit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -167,12 +159,6 @@ public class MainActivity extends AppCompatActivity {
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.dismiss();
-                                //   String userId = MyPreferences.getActiveInstance(MainActivity.this).getUserId();
-                                //  RequestParams params = new RequestParams();
-                                //  params.put("userId", userId);
-                                //  logOutWebServices(params);
-
-                                // get prompts.xml view
                             }
                         });
 
@@ -284,12 +270,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
-       /* if (this != null)
-            try {
-                this.registerReceiver(registerReceiver, intentFilter);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }*/
+
 
     }
 
